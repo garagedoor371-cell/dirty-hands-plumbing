@@ -31,16 +31,13 @@ export default function ServicePage({ params }) {
   return (
     <>
       <Schema data={schema} />
-      <section className="hero">
+      <section className="hero" style={{backgroundImage:`url('/images/hero-${(svc.slug.length % 10) + 1}.jpg')`}}>
         <div className="container">
-          <div>
-            <div className="breadcrumb"><a href="/">Home</a> / <a href="/services/">Services</a> / {svc.name}</div>
-            <h1>{svc.name} Services</h1>
-            <p>{c.intro}</p>
-            <p><a href={business.tel} className="cta-btn">Call {business.phone}</a></p>
-          </div>
-          <div>
-            <img src={`/images/hero-${(svc.slug.length % 10) + 1}.jpg`} alt={`${svc.name} by Dirty Hands Plumbing`} width="600" height="400" />
+          <div className="breadcrumb"><a href="/" style={{color:'#cbd5e1'}}>Home</a> / <a href="/services/" style={{color:'#cbd5e1'}}>Services</a> / {svc.name}</div>
+          <h1>{svc.name} Services</h1>
+          <p>{c.intro}</p>
+          <div className="cta-row">
+            <a href={business.tel} className="cta-btn">Call {business.phone}</a>
           </div>
         </div>
       </section>

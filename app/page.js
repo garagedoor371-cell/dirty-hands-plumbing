@@ -16,21 +16,19 @@ const latest = allZips.slice(0, 150);
 export default function Home() {
   return (
     <>
-      <section className="hero">
+      <section className="hero" style={{backgroundImage:"url('/images/hero-1.jpg')"}}>
         <div className="container">
-          <div>
-            <h1>Trusted 24/7 Plumbing Services Near You</h1>
-            <p>Dirty Hands Plumbing delivers fast, reliable, and affordable plumbing for homes and businesses nationwide. Licensed, bonded, and insured with upfront pricing and a satisfaction guarantee.</p>
-            <p><a href={business.tel} className="cta-btn">Call Now {business.phone}</a> <a href="/contact/" className="cta-btn" style={{background:'#fff',color:'#1e3a5f'}}>Request Service</a></p>
-            <div className="trust">
-              <div className="badge">⭐ {business.yelpRating} on Yelp ({business.yelpCount} reviews)</div>
-              <div className="badge">⭐ {business.gmbRating} on Google ({business.gmbCount} reviews)</div>
-              <div className="badge">Licensed & Insured</div>
-              <div className="badge">24/7 Emergency</div>
-            </div>
+          <h1>Trusted 24/7 Plumbing Services Near You</h1>
+          <p>Dirty Hands Plumbing delivers fast, reliable, and affordable plumbing for homes and businesses nationwide. Licensed, bonded, and insured with upfront pricing and a satisfaction guarantee.</p>
+          <div className="cta-row">
+            <a href={business.tel} className="cta-btn">Call Now {business.phone}</a>
+            <a href="/contact/" className="cta-btn" style={{background:'#fff',color:'#1e3a5f'}}>Request Service</a>
           </div>
-          <div>
-            <img src="/images/hero-1.jpg" alt="Dirty Hands Plumbing technician at work" width="600" height="400" />
+          <div className="trust" style={{marginTop:24}}>
+            <div className="badge">⭐ {business.yelpRating} on Yelp ({business.yelpCount} reviews)</div>
+            <div className="badge">⭐ {business.gmbRating} on Google ({business.gmbCount} reviews)</div>
+            <div className="badge">Licensed & Insured</div>
+            <div className="badge">24/7 Emergency</div>
           </div>
         </div>
       </section>

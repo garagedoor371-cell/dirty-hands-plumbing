@@ -35,21 +35,18 @@ export default function AreaPage({ params }) {
   return (
     <>
       <Schema data={schema} />
-      <section className="hero">
+      <section className="hero" style={{backgroundImage:`url('/images/hero-${(zip.zip.charCodeAt(0) % 10) + 1}.jpg')`}}>
         <div className="container">
-          <div>
-            <div className="breadcrumb"><a href="/">Home</a> / <a href="/areas/">Service Areas</a> / {zip.city}, {zip.state}</div>
-            <h1>Plumbing Services in {zip.city}, {zip.state} {zip.zip}</h1>
-            <p>{c.intro}</p>
-            <p><a href={business.tel} className="cta-btn">Call {business.phone}</a></p>
-            <div className="trust">
-              <div className="badge">⭐ {business.yelpRating} Yelp ({business.yelpCount} reviews)</div>
-              <div className="badge">⭐ {business.gmbRating} Google ({business.gmbCount} reviews)</div>
-              <div className="badge">Licensed & Insured</div>
-            </div>
+          <div className="breadcrumb"><a href="/" style={{color:'#cbd5e1'}}>Home</a> / <a href="/areas/" style={{color:'#cbd5e1'}}>Service Areas</a> / {zip.city}, {zip.state}</div>
+          <h1>Plumbing Services in {zip.city}, {zip.state} {zip.zip}</h1>
+          <p>{c.intro}</p>
+          <div className="cta-row">
+            <a href={business.tel} className="cta-btn">Call {business.phone}</a>
           </div>
-          <div>
-            <img src={`/images/hero-${(zip.zip.charCodeAt(0) % 10) + 1}.jpg`} alt={`Plumbing in ${zip.city}, ${zip.state}`} width="600" height="400" />
+          <div className="trust" style={{marginTop:20}}>
+            <div className="badge">⭐ {business.yelpRating} Yelp ({business.yelpCount} reviews)</div>
+            <div className="badge">⭐ {business.gmbRating} Google ({business.gmbCount} reviews)</div>
+            <div className="badge">Licensed & Insured</div>
           </div>
         </div>
       </section>
