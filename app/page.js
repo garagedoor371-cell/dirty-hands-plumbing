@@ -7,7 +7,7 @@ export const metadata = {
   description: 'Dirty Hands Plumbing offers 24/7 residential and commercial plumbing nationwide. Licensed, insured, upfront pricing. Call +1 (607) 678-1346.',
   alternates: { canonical: 'https://dirtyhandsplumbing.pages.dev/' },
   other: {
-    'google-site-verification': 'EINKhOEZAN0HVjBRXNvr7NydSaQ6n_26eOM9-HKaZcI',
+    'google-site-verification': 'UE7HgOqeNKlC56zuKMzJ4H43JAF4jEdW4LDLZSUPoKE',
   },
 };
 
